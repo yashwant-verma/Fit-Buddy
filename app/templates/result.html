@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Workout Result</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Your Workout Plan</h1>
+
+<div>
+{{ workout | safe }}
+</div>
+
+<h3>Nutrition Tip</h3>
+
+<p>{{ tip }}</p>
+
+<hr>
+
+<h3>Improve Your Plan</h3>
+
+<form action="/submit-feedback" method="post">
+
+<input type="hidden" name="user_id" value="{{ user_id }}">
+
+<textarea name="feedback" placeholder="Example: Add yoga, more cardio, reduce intensity" required></textarea>
+
+<button type="submit">Update Plan</button>
+
+</form>
+
+<br>
+
+<a href="/">
+<button>Generate Another Plan</button>
+</a>
+
+</div>
+
+</body>
+</html>
