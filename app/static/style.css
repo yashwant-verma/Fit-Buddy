@@ -163,3 +163,13 @@ width:8px;
 background:#ccc;
 border-radius:5px;
 }
+
+
+.plan-box h3{
+margin-top:20px;
+color:#ff3c3c;
+}
+
+.plan-box li{
+margin:6px 0;
+}
