@@ -28,7 +28,7 @@ Rules:
 
 Format EXACTLY like this:
 
-<b>Tip:</b> Your tip text here.
+Your tip text here.
 """
 
     try:
@@ -49,7 +49,7 @@ Format EXACTLY like this:
     except Exception:
 
         return """
- Stay hydrated and eat balanced meals with protein,
+Stay hydrated and eat balanced meals with protein,
 healthy fats, whole grains, and vegetables to support energy
 levels and recovery.
 """
