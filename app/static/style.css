@@ -1,78 +1,165 @@
 /* Reset */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Background image */
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* Background */
 
-    background-image:url("/static/gym-bg.png");
-    background-size:cover;
-    background-position:center;
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background-image:url("/static/gym-bg.png");
+background-size:cover;
+background-position:center;
+padding:30px;
 }
 
 /* Dark overlay */
+
 body::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    z-index:-1;
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
 }
 
-/* Main card */
+/* Container */
+
 .container{
-    background:white;
-    padding:40px;
-    width:450px;
-    border-radius:10px;
-    box-shadow:0px 10px 30px rgba(0,0,0,0.4);
+background:white;
+padding:40px;
+width:100%;
+max-width:900px;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.45);
 }
 
 /* Title */
+
 h1{
-    text-align:center;
-    margin-bottom:10px;
+text-align:center;
+margin-bottom:25px;
+font-size:32px;
 }
 
-.subtitle{
-    text-align:center;
-    margin-bottom:25px;
-    color:#555;
+/* Workout plan box */
+
+.plan-box{
+
+background:#f8f8f8;
+padding:25px;
+border-radius:10px;
+
+max-height:420px;
+overflow-y:auto;
+
+line-height:1.7;
+font-size:16px;
+}
+
+/* Improve readability */
+
+.plan-box h3{
+margin-top:15px;
+color:#ff3c3c;
+}
+
+.plan-box b{
+color:#333;
+}
+
+.plan-box ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+/* Nutrition section */
+
+.nutrition{
+margin-top:20px;
+padding:15px;
+background:#fff6e5;
+border-left:5px solid #ffb400;
+border-radius:6px;
+}
+
+.nutrition p{
+margin-top:5px;
+line-height:1.6;
 }
 
 /* Inputs */
-input, select{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:14px;
+
+input, select, textarea{
+
+width:100%;
+padding:12px;
+margin-top:12px;
+
+border:1px solid #ccc;
+border-radius:6px;
+
+font-size:15px;
 }
 
-/* Button */
+/* Textarea */
+
+textarea{
+min-height:90px;
+resize:vertical;
+}
+
+/* Buttons */
+
 button{
-    width:100%;
-    padding:12px;
-    margin-top:15px;
-    border:none;
-    background:#ff3c3c;
-    color:white;
-    font-size:16px;
-    border-radius:6px;
-    cursor:pointer;
-    transition:0.3s;
+
+width:100%;
+padding:14px;
+margin-top:18px;
+
+border:none;
+background:#ff3c3c;
+color:white;
+
+font-size:16px;
+font-weight:600;
+
+border-radius:8px;
+cursor:pointer;
+
+transition:0.25s;
 }
 
 button:hover{
-    background:#cc0000;
+background:#cc0000;
+}
+
+/* Secondary button */
+
+.secondary{
+background:#444;
+}
+
+.secondary:hover{
+background:#222;
+}
+
+/* Scrollbar styling */
+
+.plan-box::-webkit-scrollbar{
+width:8px;
+}
+
+.plan-box::-webkit-scrollbar-thumb{
+background:#ccc;
+border-radius:5px;
 }

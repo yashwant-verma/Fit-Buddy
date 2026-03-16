@@ -8,17 +8,18 @@
 
 <body>
 
-<div class="container">
+<div class="container result-container">
 
 <h1>Your Workout Plan</h1>
 
-<div>
+<div class="plan-box">
 {{ workout | safe }}
 </div>
 
-<h3>Nutrition Tip</h3>
-
+<div class="nutrition">
+<h3>🥗 Nutrition Tip</h3>
 <p>{{ tip }}</p>
+</div>
 
 <hr>
 
@@ -28,7 +29,11 @@
 
 <input type="hidden" name="user_id" value="{{ user_id }}">
 
-<textarea name="feedback" placeholder="Example: Add yoga, more cardio, reduce intensity" required></textarea>
+<textarea 
+name="feedback" 
+placeholder="Example: Add yoga, more cardio, reduce intensity" 
+required>
+</textarea>
 
 <button type="submit">Update Plan</button>
 
@@ -37,7 +42,7 @@
 <br>
 
 <a href="/">
-<button>Generate Another Plan</button>
+<button class="secondary">Generate Another Plan</button>
 </a>
 
 </div>

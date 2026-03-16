@@ -60,7 +60,7 @@ def generate(
 @router.post("/submit-feedback", response_class=HTMLResponse)
 def submit_feedback(
     request: Request,
-    user_id: int = Form(...),
+    user_id: str = Form(...),
     feedback: str = Form(...)
 ):
 
@@ -75,7 +75,7 @@ def submit_feedback(
         {
             "request": request,
             "workout": updated_plan,
-            "tip": "Updated workout plan based on your feedback!",
+            "tip": "Stay hydrated and eat balanced meals with protein, healthy fats, whole grains, and vegetables to support energy levels and recovery.",
             "user_id": user_id
         }
     )

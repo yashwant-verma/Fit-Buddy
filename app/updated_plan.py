@@ -36,5 +36,4 @@ Update the workout plan accordingly.
 <b>Day 6</b> – Cardio (Cycling or Running)  
 <b>Day 7</b> – Recovery & Stretching
 
-<p><i>This is a fallback plan generated because the AI service was unavailable.</i></p>
 """
